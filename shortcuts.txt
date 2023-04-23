@@ -1,0 +1,14 @@
+flutter build web --release
+sudoku/build/web
+dart pub global run dhttpd --path build/web/  # Serves app at http://localhost:8080
+
+flutter build windows --release
+sudoku/build/windows/runner/Release
+
+flutter build apk
+sudoku/build/app/outputs/flutter-apk
+
+
+cd build/web
+surge
+mySudokuMADPROJECT.surge.sh
